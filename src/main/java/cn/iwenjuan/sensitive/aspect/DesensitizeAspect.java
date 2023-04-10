@@ -7,7 +7,7 @@ import cn.iwenjuan.sensitive.enums.SensitiveType;
 import cn.iwenjuan.sensitive.handler.DesensitizeHandler;
 import cn.iwenjuan.sensitive.handler.NoDesensitizeHandler;
 import cn.iwenjuan.sensitive.utils.BeanUtils;
-import cn.iwenjuan.sensitive.utils.DataMaskUtils;
+import cn.iwenjuan.sensitive.utils.DesensitizeUtils;
 import cn.iwenjuan.sensitive.utils.ObjectUtils;
 import cn.iwenjuan.sensitive.utils.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -27,7 +27,7 @@ import java.util.Collection;
  */
 @Aspect
 @Component
-public class DataMaskAspect {
+public class DesensitizeAspect {
 
     @Pointcut("@annotation(cn.iwenjuan.sensitive.annotation.Desensitize)")
     public void pointcut() {
@@ -151,6 +151,6 @@ public class DataMaskAspect {
             return handler.desensitize(origin);
         }
         // 按照DataMaskField配置的脱敏规则处理
-        return DataMaskUtils.desensitize(origin, desensitizeField.prefixLength(), desensitizeField.suffixLength(), desensitizeField.symbol());
+        return DesensitizeUtils.desensitize(origin, desensitizeField.prefixLength(), desensitizeField.suffixLength(), desensitizeField.symbol());
     }
 }

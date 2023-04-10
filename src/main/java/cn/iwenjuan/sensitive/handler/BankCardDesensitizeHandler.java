@@ -1,6 +1,6 @@
 package cn.iwenjuan.sensitive.handler;
 
-import cn.iwenjuan.sensitive.utils.DataMaskUtils;
+import cn.iwenjuan.sensitive.utils.DesensitizeUtils;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,6 +13,6 @@ public class BankCardDesensitizeHandler implements DesensitizeHandler {
     @Override
     public String desensitize(String origin) {
         // 银行卡号脱敏规则：保留前6、后4
-        return DataMaskUtils.desensitize(origin, 6, 4);
+        return DesensitizeUtils.desensitize(origin, 6, 4);
     }
 }

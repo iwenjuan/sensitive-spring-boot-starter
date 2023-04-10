@@ -1,6 +1,6 @@
 package cn.iwenjuan.sensitive.handler;
 
-import cn.iwenjuan.sensitive.utils.DataMaskUtils;
+import cn.iwenjuan.sensitive.utils.DesensitizeUtils;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,7 +13,7 @@ public class ChineseNameDesensitizeHandler implements DesensitizeHandler {
     @Override
     public String desensitize(String origin) {
         // 中文姓名脱敏规则：保留第一位
-        return DataMaskUtils.desensitize(origin, 1, 0);
+        return DesensitizeUtils.desensitize(origin, 1, 0);
     }
 
 }

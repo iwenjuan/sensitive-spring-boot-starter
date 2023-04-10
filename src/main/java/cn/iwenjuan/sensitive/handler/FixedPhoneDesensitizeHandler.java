@@ -1,6 +1,6 @@
 package cn.iwenjuan.sensitive.handler;
 
-import cn.iwenjuan.sensitive.utils.DataMaskUtils;
+import cn.iwenjuan.sensitive.utils.DesensitizeUtils;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,6 +13,6 @@ public class FixedPhoneDesensitizeHandler implements DesensitizeHandler {
     @Override
     public String desensitize(String origin) {
         // 座机脱敏规则：保留前4、后2
-        return DataMaskUtils.desensitize(origin, 4, 2);
+        return DesensitizeUtils.desensitize(origin, 4, 2);
     }
 }

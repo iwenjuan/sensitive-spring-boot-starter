@@ -4,7 +4,7 @@ package cn.iwenjuan.sensitive.utils;
  * @author li1244
  * @date 2023/1/5 14:15
  */
-public class DataMaskUtils {
+public class DesensitizeUtils {
 
     /**
      * 对字符串进行脱敏操作

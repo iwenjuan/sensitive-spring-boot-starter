@@ -1,6 +1,6 @@
 package cn.iwenjuan.sensitive.handler;
 
-import cn.iwenjuan.sensitive.utils.DataMaskUtils;
+import cn.iwenjuan.sensitive.utils.DesensitizeUtils;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,7 +15,7 @@ public class EmailDesensitizeHandler implements DesensitizeHandler {
         // 邮箱脱敏规则：保留”@“之后的所有；保留”@“之前的前3位
         String prefix = origin.substring(0, origin.lastIndexOf("@"));
         String suffix = origin.substring(origin.lastIndexOf("@"));
-        return DataMaskUtils.desensitize(prefix, 3, 0).concat(suffix);
+        return DesensitizeUtils.desensitize(prefix, 3, 0).concat(suffix);
     }
 
 }

@@ -1,6 +1,6 @@
 package cn.iwenjuan.sensitive.handler;
 
-import cn.iwenjuan.sensitive.utils.DataMaskUtils;
+import cn.iwenjuan.sensitive.utils.DesensitizeUtils;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,6 +12,6 @@ public class AllReplaceDesensitizeHandler implements DesensitizeHandler {
 
     @Override
     public String desensitize(String origin) {
-        return DataMaskUtils.desensitize(origin, 0, 0);
+        return DesensitizeUtils.desensitize(origin, 0, 0);
     }
 }
