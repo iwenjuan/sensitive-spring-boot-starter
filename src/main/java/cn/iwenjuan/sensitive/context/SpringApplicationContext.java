@@ -18,7 +18,7 @@ import java.util.Map;
  * @author li1244
  * @date 2023/3/24 13:45
  */
-@Component
+@Component("sensitiveSpringApplicationContext")
 public class SpringApplicationContext implements BeanFactoryPostProcessor, ApplicationContextAware {
 
     private static ConfigurableListableBeanFactory beanFactory;
