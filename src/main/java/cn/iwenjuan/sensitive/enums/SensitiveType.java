@@ -11,15 +11,15 @@ public enum SensitiveType {
     /**
      * 中文名
      */
-    CHINESE_NAME(ChineseNameDesensitizeHandler .class),
+    CHINESE_NAME(ChineseNameDesensitizeHandler.class),
     /**
      * 身份证号
      */
-    ID_CARD(IdCardDesensitizeHandler .class),
+    ID_CARD(IdCardDesensitizeHandler.class),
     /**
      * 电话
      */
-    FIXED_PHONE(FixedPhoneDesensitizeHandler .class),
+    FIXED_PHONE(FixedPhoneDesensitizeHandler.class),
     /**
      * 手机
      */
