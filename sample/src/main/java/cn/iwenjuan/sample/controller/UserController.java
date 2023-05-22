@@ -1,5 +1,6 @@
 package cn.iwenjuan.sample.controller;
 
+import cn.iwenjuan.sample.api.ApiResult;
 import cn.iwenjuan.sample.domain.User;
 import cn.iwenjuan.sample.service.IUserService;
 import cn.iwenjuan.sensitive.annotation.Desensitize;
@@ -25,10 +26,10 @@ public class UserController {
 
     @GetMapping("")
     @Desensitize
-    public User getUser() {
+    public ApiResult getUser() {
 
         User user = userService.getUser();
         log.info("脱敏前：{}", JSON.toJSONString(user));
-        return user;
+        return new ApiResult().setCode(200).setData(user);
     }
 }

@@ -48,7 +48,7 @@ public class User {
     /**
      * 手机号码
      */
-    @DesensitizeField(type = SensitiveType.MOBILE_PHONE)
+    @DesensitizeField(type = SensitiveType.CUSTOM, prefixLength = 3, suffixLength = 4)
     private String mobilePhone;
     /**
      * 住址
